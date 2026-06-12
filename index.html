@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Multiscale modelling of PBX AR</title>
+<title>PHuN Poster AR</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
@@ -50,13 +50,11 @@ device-orientation-permission-ui="enabled:false">
 
 <a-assets>
 
-<video id="video1" src="./movies/BASIC_animation.mp4" loop muted playsinline crossorigin="anonymous"></video>
+<video id="video1" src="./movies/video1.mp4" loop muted playsinline crossorigin="anonymous"></video>
 
-<video id="video2" src="./movies/ADJ_animation.mp4" loop muted playsinline crossorigin="anonymous"></video>
+<video id="video2" src="./movies/video2.mp4" loop muted playsinline crossorigin="anonymous"></video>
 
-<video id="video3" src="./movies/STAG_animation.mp4" loop muted playsinline crossorigin="anonymous"></video>
-
-<video id="video4" src="./movies/TRI_animation.mp4" loop muted playsinline crossorigin="anonymous"></video>
+<video id="video3" src="./movies/video3.mp4" loop muted playsinline crossorigin="anonymous"></video>
 
 </a-assets>
 
@@ -113,23 +111,6 @@ playsinline>
 
 </a-entity>
 
-<!-- Marker 4 -->
-<a-entity mindar-image-target="targetIndex:3" id="target4">
-
-<a-video
-src="#video4"
-width="2"
-height="1.124"
-position="0 0 0"
-stabilize
-autoplay
-loop
-muted
-playsinline>
-</a-video>
-
-</a-entity>
-
 </a-scene>
 
 <script>
@@ -137,15 +118,13 @@ playsinline>
 const videos = [
 document.querySelector("#video1"),
 document.querySelector("#video2"),
-document.querySelector("#video3"),
-document.querySelector("#video4")
+document.querySelector("#video3")
 ]
 
 const targets = [
 document.querySelector("#target1"),
 document.querySelector("#target2"),
-document.querySelector("#target3"),
-document.querySelector("#target4")
+document.querySelector("#target3")
 ]
 
 videos.forEach(v=>{
